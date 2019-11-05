@@ -4,6 +4,7 @@ Capacitor plugin for [branch.io](https://branch.io/) deep links.
 
 ```sh
 npm install capacitor-branch-deep-links
+npx cap update [ios|android]
 ```
 
 ## Usage
@@ -91,7 +92,7 @@ Declare `BranchApp` as your application class in `src/main/AndroidManifest.xml`:
 ```
 
 Provide your Branch config within `<application>`:
-    
+
 ```xml
 <meta-data android:name="io.branch.sdk.BranchKey" android:value="@string/branch_key" />
 <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="@string/branch_test_key" />
@@ -122,18 +123,8 @@ Follow the Branch docs to:
 4. [Configure entitlements](https://docs.branch.io/apps/ios/#configure-entitlements)
 5. [Configure Info.plist](https://docs.branch.io/apps/ios/#configure-infoplist)
 
-> You can use the [Branch wizard](https://dashboard.branch.io/start/existing-users/ios) to walk you through the process  
+> You can use the [Branch wizard](https://dashboard.branch.io/start/existing-users/ios) to walk you through the process
   (skip the *Get the SDK files* and *Start a Branch session* steps)
-
-Add Branch to your `Podfile`:
-
-```diff
-  target 'App' do
-    capacitor_pods
-    # Add your Pods here
-+   pod 'Branch';
-  end
-```
 
 Update the project:
 
